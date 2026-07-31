@@ -13,7 +13,7 @@ const quiz = [
   {
     id: 2,
     question: "Which language is used for styling web pages?",
-    options: ["HTML", "CSS", "Java", "Python"],
+    options: ["HTML", "CSS", "JavaScript", "Python"],
     answer: 1
   },
   {
@@ -31,32 +31,42 @@ const quiz = [
   {
     id: 5,
     question: "Which symbol is used for single-line comments in JavaScript?",
-    options: ["//", "/* */", "#", "<!-- -->"],
-    answer: 0
+    options: ["/* */", "//", "#", "&lt;!-- --&gt;"],
+    answer: 1
   },
   {
     id: 6,
-    question: "Which keyword is used to declare a variable?",
-    options: ["int", "let", "char", "float"],
-    answer: 1
+    question: "Which keyword is used to declare a constant in JavaScript?",
+    options: ["let", "var", "const", "static"],
+    answer: 2
   },
   {
     id: 7,
-    question: "Which method prints data in the console?",
-    options: ["print()", "console.log()", "write()", "alert()"],
-    answer: 1
+    question: "Which method is used to print output in the browser console?",
+    options: ["document.write()", "alert()", "console.log()", "print()"],
+    answer: 2
   },
   {
     id: 8,
-    question: "Which tag is used to add JavaScript?",
-    options: ["<script>", "<js>", "<javascript>", "<code>"],
-    answer: 0
+    question: "Which HTML tag is used to include JavaScript?",
+    options: [
+      "&lt;javascript&gt;",
+      "&lt;js&gt;",
+      "&lt;script&gt;",
+      "&lt;code&gt;"
+    ],
+    answer: 2
   },
-
+  {
+    id: 9,
+    question: "Which method adds an element at the end of an array?",
+    options: ["pop()", "shift()", "push()", "unshift()"],
+    answer: 2
+  },
   {
     id: 10,
-    question: "Which method converts JSON string into object?",
-    options: ["JSON.parse()", "JSON.stringify()", "JSON.object()", "JSON.convert()"],
+    question: "Which method removes the last element from an array?",
+    options: ["pop()", "push()", "shift()", "slice()"],
     answer: 0
   }
 ];
@@ -70,34 +80,29 @@ const nextBtn = document.getElementById("nextBtn");
 
 function loadQuestion() {
   qns.innerHTML = `Question ${currentQuestion + 1}/${quiz.length}`;
-
   showQuestion.innerHTML = quiz[currentQuestion].question;
-
   option.innerHTML = "";
 
   quiz[currentQuestion].options.forEach((item) => {
     const btn = document.createElement("button");
-
-    btn.className = "btn btn-outline-primary w-100 mb-2 p-3";
+    btn.className = "btn btn-outline-primary w-100 mb-2";
     btn.innerHTML = item;
-
     option.appendChild(btn);
   });
 }
 
 loadQuestion();
 
-nextBtn.addEventListener("click", function () {
-
+nextBtn.addEventListener("click", () => {
   currentQuestion++;
 
   if (currentQuestion < quiz.length) {
     loadQuestion();
   } else {
     qns.innerHTML = "";
-    showQuestion.innerHTML = "Quiz Completed!";
+    showQuestion.innerHTML = "<h2 class='text-success'> Quiz Completed!</h2>";
     option.innerHTML = "";
     nextBtn.style.display = "none";
+    
   }
-
 });

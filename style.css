@@ -4,3 +4,8 @@
     box-sizing: border-box;
 }
 
+body{
+    /* https://grabient.com/_gIigKJgI1gCXgEGgDtgNYgFhgSdgFngHjgJygAvovogR */
+
+background: conic-gradient(from 0deg, #70636a 0.000deg, #70636a 17.143deg, #6a637e calc(17.143deg + 0.1deg), #6a637e 34.286deg, #666494 calc(34.286deg + 0.1deg), #666494 51.429deg, #6566aa calc(51.429deg + 0.1deg), #6566aa 68.571deg, #6669bc calc(68.571deg + 0.1deg), #6669bc 85.714deg, #6b6dc8 calc(85.714deg + 0.1deg), #6b6dc8 102.857deg, #7171cd calc(102.857deg + 0.1deg), #7171cd 120.000deg, #7a76c9 calc(120.000deg + 0.1deg), #7a76c9 137.143deg, #847bbd calc(137.143deg + 0.1deg), #847bbd 154.286deg, #8e81ac calc(154.286deg + 0.1deg), #8e81ac 171.429deg, #988896 calc(171.429deg + 0.1deg), #988896 188.571deg, #a18f80 calc(188.571deg + 0.1deg), #a18f80 205.714deg, #a9966c calc(205.714deg + 0.1deg), #a9966c 222.857deg, #ae9d5d calc(222.857deg + 0.1deg), #ae9d5d 240.000deg, #b1a455 calc(240.000deg + 0.1deg), #b1a455 257.143deg, #b1ac55 calc(257.143deg + 0.1deg), #b1ac55 274.286deg, #afb35d calc(274.286deg + 0.1deg), #afb35d 291.429deg, #aaba6c calc(291.429deg + 0.1deg), #aaba6c 308.571deg, #a3c180 calc(308.571deg + 0.1deg), #a3c180 325.714deg, #9ac896 calc(325.714deg + 0.1deg), #9ac896 342.857deg, #90ceab calc(342.857deg + 0.1deg) 360.000deg);
+}
