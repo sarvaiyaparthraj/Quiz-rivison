@@ -11,45 +11,86 @@
 </head>
 <body>
 
-  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
 
-    <div class="card shadow-lg p-4" style="max-width:700px; width:100%;">
+  <div class="card shadow-lg p-4" style="max-width:700px;width:100%;">
 
-      <h2 class="text-center mb-3">
-        Quiz Application
-      </h2>
+    <h2 class="text-center mb-3">
+      Quiz Application
+    </h2>
 
-      <div class="d-flex justify-content-between fs-4">
-        <p id="qns" class="text-primary">
-          Qns 1/10
-        </p>
-
-        <p id="timer" class="text-danger">
-          Time : 30s
-        </p>
+    <div class="progress mb-3">
+      <div
+        id="progressBar"
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        style="width:0%">
       </div>
+    </div>
 
-      <h4 id="showQuestion" class="text-center my-4">
-        Question
-      </h4>
 
-      <div id="option" class="d-grid gap-3">
+    <div class="d-flex justify-content-between mb-3">
+
+      <h5 id="qnsNumber" class="text-primary">
+        Question 1 / 10
+      </h5>
+
+      <h5 id="timer" class="text-danger">
+        30s
+      </h5>
+
+    </div>
+
+
+    <h4 id="question" class="text-center mb-4">
+      Question
+    </h4>
+
    
-      </div>
+    <div id="option" class="d-grid gap-2">
 
-      <div class="text-center mt-4">
-        <button id="nextBtn" class="btn btn-danger">
-          Next
-        </button>
-      </div>
+      <button class="btn btn-outline-primary option"></button>
+      <button class="btn btn-outline-primary option"></button>
+      <button class="btn btn-outline-primary option"></button>
+      <button class="btn btn-outline-primary option"></button>
+
+    </div>
+
+
+    <div class="d-flex justify-content-between mt-4">
+
+      <button id="prevBtn" class="btn btn-secondary">
+        Previous
+      </button>
+
+      <button id="nextBtn" class="btn btn-danger">
+        Next
+      </button>
+
+      <button id="submitBtn" class="btn btn-success">
+        Submit
+      </button>
+
+    </div>
+
+    <!-- Result -->
+    <div id="resultBox" class="d-none text-center mt-4">
+
+      <h2>🎉 Quiz Completed</h2>
+
+      <h3>
+        Score :
+        <span id="score"></span>
+      </h3>
 
     </div>
 
   </div>
 
-  <script src="./script.js"></script>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
